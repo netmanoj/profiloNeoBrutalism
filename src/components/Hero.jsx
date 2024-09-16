@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <section 
       className="w-full h-screen bg-cover bg-center flex flex-col justify-center items-center text-center border-black border-b-2"
-      style={{ backgroundImage: "url('/back.png')" }}
+      style={{ backgroundImage: "url('public/images/back.png')" }}
     >
       <div className="relative w-100 h-auto border-4 border-black bg-white rounded-lg hover:shadow-[8px_8px_0px_rgba(0,0,0,1)] transition-shadow duration-300 flex items-center p-8">
         {/* Profile Photo */}
