@@ -10,8 +10,17 @@ const Contact = () => {
           method="POST"
           data-netlify="true"
           className="flex flex-col space-y-4"
+          // Optional: Use Netlify's `netlify` attribute to enable AJAX form handling if needed
+          // data-netlify-honeypot="bot-field" 
         >
           <input type="hidden" name="form-name" value="contact" />
+          {/* Honeypot field to catch spam bots */}
+          <p className="hidden">
+            <label>
+              Don’t fill this out if you’re human: 
+              <input name="bot-field" />
+            </label>
+          </p>
           <input
             type="text"
             name="name"
@@ -40,6 +49,8 @@ const Contact = () => {
             Send Message
           </button>
         </form>
+        {/* Optional: Success/Error message display could go here */}
+        {/* <p id="form-status" className="text-center mt-4"></p> */}
       </div>
     </section>
   );
