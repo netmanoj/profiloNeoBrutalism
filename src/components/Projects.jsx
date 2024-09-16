@@ -5,42 +5,42 @@ const projects = [
     title: 'Movies Go',
     date: '2024',
     description: 'Movies Database built using TMDB Api',
-    image: 'public/movies.png',
+    image: 'public/images/movies.png',
     link: 'https://github.com/netmanoj/moviesGo'
   },
   {
     title: 'Groupie Group Chat App',
     date: 'December 2022',
     description: 'This project is a real-time chat application built with React, Redux, Node.js,Firebase featuring live messaging, notifications, and user statuses.',
-    image: 'public/group.png',
+    image: 'public/images/group.png',
     link: 'https://real-time-chat-app-5952a.firebaseapp.com/'
   },
   {
     "title": "Find Food App",
     "date": "August 2024",
     "description": "A responsive app developed using React and ContextApi that helps users find and order food. The application features a sleek UI, real-time search functionality, and user-friendly navigation.",
-    "image": "/public/food.png",
+    "image": "/public/images/food.png",
     "link": "https://github.com/netmanoj/findFoodApp"
   },
   {
    "title": "Expense Tracker",
     "date": "August 5th, 2023",
     "description": "An open-source expense tracker application built using React ContextApi. It includes features for tracking expenses, generating reports, and user-friendly error handling.",
-    "image": "/public/track.png",
+    "image": "/public/images/track.png",
     "link": "https://github.com/netmanoj/expenseTrack"
   },
   {
     "title": "Electricity Management System UI",
     "date": "August 5th, 2023",
     "description": "A user interface for managing electricity systems, featuring a responsive design built with modern web technologies. The application includes dashboards for monitoring usage, managing accounts, and generating reports.",
-    "image": "/public/electric.png",
+    "image": "/public/images/electric.png",
     "link": "https://github.com/netmanoj/electricShockAdminPanel"
   },
   {
     title: 'Homieforever- Food Delevery System',
     date: '2021',
     description: 'A food devlevery web application for ordering food.',
-    image: 'public/homie.png',
+    image: 'public/images/homie.png',
     link: 'https://github.com/netmanoj/fos'
   }
 ];
