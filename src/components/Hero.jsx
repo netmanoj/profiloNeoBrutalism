@@ -1,5 +1,6 @@
 import Typewriter from "typewriter-effect";
 
+
 const Hero = () => {
   return (
     <section 
@@ -10,7 +11,7 @@ const Hero = () => {
         {/* Profile Photo */}
         <div className="w-32 h-32 rounded-full border-4 border-black bg-gray-200 shadow-[8px_8px_0_rgba(0,0,0,1)] overflow-hidden mr-6">
           <img
-            src="/public/images/profile.png" // Replace with your profile photo URL
+            src="/images/profile.png" // Replace with your profile photo URL
             alt="Profile"
             className="w-full h-full object-cover"
           />
