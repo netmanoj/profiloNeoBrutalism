@@ -7,12 +7,12 @@ const Footer = () => {
       <p className="text-2xl mb-4">© 2023 Manoj | Made By a Human</p>
       <ul className="flex justify-center space-x-4">
         <li>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <a href="https://github.com/netmanoj/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <FaGithub className="w-8 h-8 text-black hover:text-gray-700 transition duration-300" />
           </a>
         </li>
         <li>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <a href="https://linkedin.com/livingmanoj/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <FaLinkedin className="w-8 h-8 text-blue-700 hover:text-blue-900 transition duration-300" />
           </a>
         </li>
