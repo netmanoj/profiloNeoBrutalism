@@ -30,7 +30,7 @@ const Navbar = () => {
     <nav className={`fixed top-0 left-0 w-full bg-[#b8ff9f] py-4 shadow-[8px_8px_0px_rgba(0,0,0,1)] z-50 transition-transform ${showNavbar ? 'transform-none' : '-translate-y-full'}`}>
       <div className="container mx-auto flex items-center justify-between px-4">
         {/* Navbar Name */}
-        <h1 className="text-2xl font-bold text-black">Manoj Adhikari</h1>
+        <h1 className="text-2xl font-bold text-black ">Manoj Adhikari</h1>
 
         {/* Navbar Links for Desktop */}
         <ul className="hidden md:flex md:space-x-6">
