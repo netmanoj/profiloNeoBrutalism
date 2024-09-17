@@ -1,0 +1,290 @@
+/* General Styles for Animated Shapes */
+
+/* Crystal Animations */
+@keyframes float1 {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(-30px, 30px) rotate(30deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+  }
+  
+  @keyframes float2 {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(40px, -20px) rotate(45deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+  }
+  
+  @keyframes float3 {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(-50px, -50px) rotate(30deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+  }
+  
+  @keyframes float4 {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(60px, 40px) rotate(20deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+  }
+  
+  @keyframes float5 {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(-40px, 50px) rotate(60deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+  }
+  
+  /* Circle Animations */
+  @keyframes rotateCircle {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Triangle Animations */
+  @keyframes rotateTriangle {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Hero Component Styles */
+  .hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('/images/back.png') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid black;
+    overflow: hidden;
+  }
+  
+  .hero-content {
+    position: relative;
+    width: auto;
+    height: auto;
+    border: 4px solid black;
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 8px 8px 0px rgba(0, 0, 0, 1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .profile-photo {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    border: 4px solid black;
+    background: gray;
+    box-shadow: 8px 8px 0px rgba(0, 0, 0, 1);
+    overflow: hidden;
+    margin-right: 1.5rem;
+  }
+  
+  .profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: black;
+    font-family: 'Anton', sans-serif;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.5rem;
+    color: black;
+    font-family: 'Elite', sans-serif;
+  }
+  
+  /* Contact Component Styles */
+  .contact-section {
+    width: 100%;
+    padding: 3rem 0;
+    background: white;
+    border-bottom: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Ensure positioning context for animated shapes */
+    overflow: hidden;
+  }
+  
+  .contact-form {
+    width: 22rem;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 1.5rem;
+    background: white;
+    box-shadow: 8px 8px 0px rgba(0, 0, 0, 1);
+    position: relative;
+    z-index: 10; /* Ensure contact form is above animated shapes */
+  }
+  
+  .contact-form h2 {
+    font-size: 1.75rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    border: 2px solid black;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    background: #FFA6F6;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
+    outline: none;
+  }
+  
+  .contact-form button {
+    height: 3rem;
+    border: 2px solid black;
+    padding: 0.5rem;
+    background: #A6FAFF;
+    border-radius: 8px;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+    background: #79F7FF;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
+  }
+  
+  .contact-form button:active {
+    background: #00E1EF;
+  }
+  
+  /* Animated Shapes */
+  .shape {
+    position: absolute;
+    pointer-events: none;
+    z-index: 1; /* Ensure shapes are below contact form */
+  }
+  
+  .crystal1 { 
+    width: 30px; 
+    height: 30px; 
+    background: #FF6347; /* Solid color */ 
+    border-radius: 50%; 
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 1); /* Solid black shadow */ 
+    animation: float1 8s infinite; 
+  }
+  
+  .crystal2 { 
+    width: 30px; 
+    height: 30px; 
+    background: #00CED1; /* Solid color */ 
+    border-radius: 50%; 
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 1); /* Solid black shadow */ 
+    animation: float2 10s infinite; 
+  }
+  
+  .crystal3 { 
+    width: 30px; 
+    height: 30px; 
+    background: #ADFF2F; /* Solid color */ 
+    border-radius: 50%; 
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 1); /* Solid black shadow */ 
+    animation: float3 12s infinite; 
+  }
+  
+  .crystal4 { 
+    width: 30px; 
+    height: 30px; 
+    background: #FF4500; /* Solid color */ 
+    border-radius: 50%; 
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 1); /* Solid black shadow */ 
+    animation: float4 14s infinite; 
+  }
+  
+  .crystal5 { 
+    width: 30px; 
+    height: 30px; 
+    background: #DAA520; /* Solid color */ 
+    border-radius: 50%; 
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 1); /* Solid black shadow */ 
+    animation: float5 16s infinite; 
+  }
+  
+  .circle1 { 
+    width: 40px; 
+    height: 40px; 
+    background: #8A2BE2; /* Solid color */ 
+    border-radius: 50%; 
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 1); /* Solid black shadow */ 
+    animation: rotateCircle 8s linear infinite; 
+  }
+  
+  .circle2 { 
+    width: 40px; 
+    height: 40px; 
+    background: #FFD700; /* Solid color */ 
+    border-radius: 50%; 
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 1); /* Solid black shadow */ 
+    animation: rotateCircle 10s linear infinite; 
+  }
+  
+  .triangle1 {
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid transparent; 
+    border-right: 20px solid transparent; 
+    border-bottom: 40px solid #FF6347; /* Solid color */ 
+    transform: rotate(45deg);
+    filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 1)); /* Solid black shadow */
+    animation: rotateTriangle 12s linear infinite; 
+  }
+  
+  .triangle2 {
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid transparent; 
+    border-right: 20px solid transparent; 
+    border-bottom: 40px solid #00CED1; /* Solid color */ 
+    transform: rotate(135deg);
+    filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 1)); /* Solid black shadow */
+    animation: rotateTriangle 14s linear infinite; 
+  }
+  
+  .triangle3 {
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid transparent; 
+    border-right: 20px solid transparent; 
+    border-bottom: 40px solid #ADFF2F; /* Solid color */ 
+    transform: rotate(60deg);
+    filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 1)); /* Solid black shadow */
+    animation: rotateTriangle 16s linear infinite; 
+  }
+  
+  .triangle4 {
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid transparent; 
+    border-right: 20px solid transparent; 
+    border-bottom: 40px solid #FF4500; /* Solid color */ 
+    transform: rotate(120deg);
+    filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 1)); /* Solid black shadow */
+    animation: rotateTriangle 18s linear infinite; 
+  }
+  
+  .triangle5 {
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid transparent; 
+    border-right: 20px solid transparent; 
+    border-bottom: 40px solid #DAA520; /* Solid color */ 
+    transform: rotate(150deg);
+    filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 1)); /* Solid black shadow */
+    animation: rotateTriangle 20s linear infinite; 
+  }
+  
+  

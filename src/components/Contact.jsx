@@ -1,20 +1,18 @@
 import React from 'react';
+import './Contact.css';
 
 const Contact = () => {
   return (
-    <section className="w-full py-12 bg-white border-black border-b-2 flex justify-center items-center">
-      <div className="w-[352px] border-black border-2 rounded-md p-6 bg-white shadow-[8px_8px_0px_rgba(0,0,0,1)]">
+    <section className="contact-section">
+      <div className="contact-form">
         <h2 className="text-3xl text-center mb-6 font-bold">Contact Me</h2>
         <form
           name="contact"
           method="POST"
           data-netlify="true"
           className="flex flex-col space-y-4"
-          // Optional: Use Netlify's `netlify` attribute to enable AJAX form handling if needed
-          // data-netlify-honeypot="bot-field" 
         >
           <input type="hidden" name="form-name" value="contact" />
-          {/* Honeypot field to catch spam bots */}
           <p className="hidden">
             <label>
               Don’t fill this out if you’re human: 
@@ -49,9 +47,21 @@ const Contact = () => {
             Send Message
           </button>
         </form>
-        {/* Optional: Success/Error message display could go here */}
-        {/* <p id="form-status" className="text-center mt-4"></p> */}
       </div>
+
+      {/* Animated Shapes */}
+      <div className="shape crystal1"></div>
+      <div className="shape crystal2"></div>
+      <div className="shape crystal3"></div>
+      <div className="shape crystal4"></div>
+      <div className="shape crystal5"></div>
+      <div className="shape circle1"></div>
+      <div className="shape circle2"></div>
+      <div className="shape triangle1"></div>
+      <div className="shape triangle2"></div>
+      <div className="shape triangle3"></div>
+      <div className="shape triangle4"></div>
+      <div className="shape triangle5"></div>
     </section>
   );
 };
