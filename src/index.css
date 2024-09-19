@@ -53,40 +53,40 @@
 }
 
 .crystal1 { 
-  width: 30px; 
-  height: 30px; 
+  width: 40px; 
+  height: 40px; 
   background: #FF6347; /* Solid color */ 
   border-radius: 50%; 
   box-shadow: 4px 4px 0px rgba(0, 0, 0, 1); /* Solid black shadow */ 
   animation: float1 8s infinite; 
 }
 .crystal2 { 
-  width: 30px; 
-  height: 30px; 
+  width: 40px; 
+  height: 40px; 
   background: #00CED1; /* Solid color */ 
   border-radius: 50%; 
   box-shadow: 4px 4px 0px rgba(0, 0, 0, 1); /* Solid black shadow */ 
   animation: float2 10s infinite; 
 }
 .crystal3 { 
-  width: 30px; 
-  height: 30px; 
+  width: 40px; 
+  height: 40px; 
   background: #ADFF2F; /* Solid color */ 
   border-radius: 50%; 
   box-shadow: 4px 4px 0px rgba(0, 0, 0, 1); /* Solid black shadow */ 
   animation: float3 12s infinite; 
 }
 .crystal4 { 
-  width: 30px; 
-  height: 30px; 
+  width: 40px; 
+  height: 40px; 
   background: #FF4500; /* Solid color */ 
   border-radius: 50%; 
   box-shadow: 4px 4px 0px rgba(0, 0, 0, 1); /* Solid black shadow */ 
   animation: float4 14s infinite; 
 }
 .crystal5 { 
-  width: 30px; 
-  height: 30px; 
+  width: 40px; 
+  height: 40px; 
   background: #DAA520; /* Solid color */ 
   border-radius: 50%; 
   box-shadow: 4px 4px 0px rgba(0, 0, 0, 1); /* Solid black shadow */ 
@@ -94,16 +94,16 @@
 }
 
 .circle1 { 
-  width: 40px; 
-  height: 40px; 
+  width: 50px; 
+  height: 50px; 
   background: #8A2BE2; /* Solid color */ 
   border-radius: 50%; 
   box-shadow: 4px 4px 0px rgba(0, 0, 0, 1); /* Solid black shadow */ 
   animation: rotateCircle 8s linear infinite; 
 }
 .circle2 { 
-  width: 40px; 
-  height: 40px; 
+  width: 50px; 
+  height: 50px; 
   background: #FFD700; /* Solid color */ 
   border-radius: 50%; 
   box-shadow: 4px 4px 0px rgba(0, 0, 0, 1); /* Solid black shadow */ 
@@ -160,77 +160,23 @@
 /* Example CSS for the sound playing section */
 
 /* Play Music */
-.app {
-  min-height: 10vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: -2px;
+
+.shadow-black-neobrutalist {
+  box-shadow: 10px 10px 0px 0px black; /* Neo-brutalist solid shadow */
 }
 
-.pads {
-  background: #ecbc00; /* Bright yellow for high contrast */
-  width: 100%;
-  display: flex;
-}
-
-.pads > div {
-  height: 100px;
-  width: 100%;
-  flex: 1;
-}
-
-.pad1 {
-  background-color: #f94712; /* Bright, solid orange */
-}
-
-.pad2 {
-  background-color: #0e6721; /* Solid green */
-}
-
-.pad3 {
-  background-color: #ff00f8; /* Solid purple */
-}
-
-.pad4 {
-  background-color: #eeff36; /* Bright yellow */
-}
-
-.pad5 {
-  background-color: #7c7bff; /* Solid blue */
-}
-
-.pad6 {
-  background-color: #00bcd4; /* Bright cyan */
-}
-
-/* padd sec */
-.padd {
-  min-height: 10vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  background: #212121; /* Dark grey for contrast */
-  height: 89px;
-  position: fixed;
-  width: 100%;
-  margin-bottom: 0;
-}
-
-.padd > div {
-  height: 200px;
-  width: 150px;
-  flex: 1;
-}
-
-.visual > div {
-  position: absolute;
-  bottom: 0%;
-  height: 50px;
+.pads > .pad {
   width: 50px;
-  border-radius: 50%;
-  background-color: #ffffff; /* Solid white for high contrast */
-  z-index: -1;
+  height: 50px;
+  background-color: #fff;
+  border: 2px solid black;
+  margin: 10px;
+  display: inline-block;
+  cursor: pointer;
+  box-shadow: 10px 10px 0px 0px black; /* Solid black shadow for pads */
+  transition: transform 0.1s ease-in-out;
+}
+
+.pads > .pad:hover {
+  transform: translate(-5px, -5px); /* Slight hover effect to emphasize neo-brutalist feel */
 }

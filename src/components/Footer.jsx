@@ -42,58 +42,38 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="w-full px-10 py-6 bg-[#A6FAFF] border-black border-t-2 text-center">
-      <p className="text-2xl mb-4">© 2023 Manoj | Made By a Human</p>
-      <ul className="flex justify-center space-x-4 mb-6">
-        <li>
-          <a href="https://github.com/netmanoj/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-            <FaGithub className="w-8 h-8 text-black hover:text-gray-700 transition duration-300" />
-          </a>
-        </li>
-        <li>
-          <a href="https://linkedin.com/livingmanoj/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-            <FaLinkedin className="w-8 h-8 text-blue-700 hover:text-blue-900 transition duration-300" />
-          </a>
-        </li>
-      </ul>
+    <footer className="w-full px-10 py-6 bg-[#A6FAFF] border-black border-t-2 text-center shadow-black-neobrutalist">
+  <p className="text-2xl mb-4">© 2023 Manoj | Made By a Human</p>
+  <ul className="flex justify-center space-x-4 mb-6">
+    <li>
+      <a href="https://github.com/netmanoj/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <FaGithub className="w-8 h-8 text-black hover:text-gray-700 transition duration-300" />
+      </a>
+    </li>
+    <li>
+      <a href="https://linkedin.com/livingmanoj/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <FaLinkedin className="w-8 h-8 text-blue-700 hover:text-blue-900 transition duration-300" />
+      </a>
+    </li>
+  </ul>
 
-      {/* Sound playing section */}
-      <section className="app">
-        <div className="visual">
-          {/* Add visual elements if needed */}
-        </div>
-        <p className='font-mono'>Touch the color boxes below to play music</p>
+  <section className="app">
+    <div className="visual">
+      {/* Add visual elements if needed */}
+    </div>
+    <p className="font-mono">Click the boxes below to play music</p>
+    <br />
+    <div className="pads">
+      <div className="pad pad1"></div>
+      <div className="pad pad2"></div>
+      <div className="pad pad3"></div>
+      <div className="pad pad4"></div>
+      <div className="pad pad5"></div>
+      <div className="pad pad6"></div>
+    </div>
+  </section>
+</footer>
 
-        <br />
-        <div className="pads">
-          <div className="pad1"> {/* No need for <audio> tags here */}
-            {/* This pad will play sound 0 */}
-          </div>
-          <div className="pad2"> {/* This pad will play sound 1 */}
-            {/* ... */}
-          </div>
-          <div className="pad3"> {/* This pad will play sound 2 */}
-            {/* ... */}
-          </div>
-          <div className="pad4"> {/* This pad will play sound 3 */}
-            {/* ... */}
-          </div>
-          <div className="pad5"> {/* This pad will play sound 4 */}
-            {/* ... */}
-          </div>
-          <div className="pad6"> {/* This pad will play sound 5 */}
-            {/* ... */}
-          </div>
-        </div>
-      </section>
-      <section className="padd">
-        <div className="padd">
-          <div className="pad6"> {/* This pad will play sound 5 */}
-            {/* ... */}
-          </div>
-        </div>
-      </section>
-    </footer>
   );
 };
 
