@@ -1,11 +1,25 @@
-import Typewriter from "typewriter-effect";
-import React from 'react';
+import React, { useState } from 'react';
+import Typewriter from 'typewriter-effect';
+import { FaRegImage, FaImage } from 'react-icons/fa'; // Import icons
 
 const Hero = () => {
+  // State to manage the background image
+  const [backgroundImage, setBackgroundImage] = useState('/images/back.png');
+
+  // Function to toggle the background image
+  const toggleBackgroundImage = () => {
+    setBackgroundImage(prevImage =>
+      prevImage === '/images/back.png' ? '/images/back1.png' : '/images/back.png'
+    );
+  };
+
+  // Determine icon color based on background image
+  const iconColor = backgroundImage === '/images/back.png' ? '#00FFFF' : 'white'; // Light blue for 'back.png'
+
   return (
     <section
       className="relative w-full h-screen bg-cover bg-center flex flex-col justify-center items-center text-center border-black border-b-2"
-      style={{ backgroundImage: "url('/images/back.png')" }}
+      style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       {/* Floating Shapes */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -66,6 +80,19 @@ const Hero = () => {
           </div>
         </div>
       </div>
+
+      {/* Button to change background image with icons */}
+      <button
+        onClick={toggleBackgroundImage}
+        className="absolute bottom-4 right-4 bg-gray-800 text-white p-3 rounded-full shadow-md hover:bg-gray-600 transition-colors duration-300 flex items-center justify-center"
+        aria-label="Toggle Background Image"
+      >
+        {backgroundImage === '/images/back.png' ? (
+          <FaImage size={24} color={iconColor} /> // Icon for 'back.png'
+        ) : (
+          <FaRegImage size={24} color={iconColor} /> // Icon for 'back1.png'
+        )}
+      </button>
     </section>
   );
 };
