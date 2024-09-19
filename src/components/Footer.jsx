@@ -43,7 +43,7 @@ const Footer = () => {
 
   return (
     <footer className="w-full px-10 py-6 bg-[#A6FAFF] border-black border-t-2 text-center shadow-black-neobrutalist">
-  <p className="text-2xl mb-4">© 2023 Manoj | Made By a Human</p>
+  <p className="text-2xl mb-4">© 2024 Manoj | Made By a Human</p>
   <ul className="flex justify-center space-x-4 mb-6">
     <li>
       <a href="https://github.com/netmanoj/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
