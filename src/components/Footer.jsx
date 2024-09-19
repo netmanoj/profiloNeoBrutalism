@@ -51,7 +51,7 @@ const Footer = () => {
       </a>
     </li>
     <li>
-      <a href="https://linkedin.com/livingmanoj/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+      <a href="https://www.linkedin.com/in/livingmanoj/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
         <FaLinkedin className="w-8 h-8 text-blue-700 hover:text-blue-900 transition duration-300" />
       </a>
     </li>

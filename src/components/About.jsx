@@ -8,7 +8,7 @@ const About = () => {
       </h2>
 
       {/* Reduced width wrapper */}
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-3xl mx-auto">
         <p className="text-lg font-mono font-light text-[#1A1A1A]">
           I am a passionate web developer specializing in building and designing modern web applications with the MERN stack. My expertise also includes Linux, C programming, and more.
         </p>
