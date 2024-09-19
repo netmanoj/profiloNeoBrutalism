@@ -11,6 +11,7 @@ const Contact = () => {
           method="POST"
           data-netlify="true"
           className="flex flex-col space-y-4"
+          netlify
         >
           <input type="hidden" name="form-name" value="contact" />
           <p className="hidden">
