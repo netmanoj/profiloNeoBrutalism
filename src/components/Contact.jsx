@@ -9,7 +9,6 @@ const Contact = () => {
         <form
           name="contact"
           method="POST"
-          data-netlify="true"
           className="flex flex-col space-y-4"
           netlify
         >
