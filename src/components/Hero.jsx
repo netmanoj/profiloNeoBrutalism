@@ -13,8 +13,11 @@ const Hero = () => {
     );
   };
 
+  // Determine box background color based on background image
+  const boxBackgroundColor = backgroundImage === '/images/back.png' ? '#A6FAFF' : 'white'; // Blue for 'back.png'
+
   // Determine icon color based on background image
-  const iconColor = backgroundImage === '/images/back.png' ? '#00FFFF' : 'white'; // Light blue for 'back.png'
+  const iconColor = backgroundImage === '/images/back.png' ? '#A6FAFF' : 'white'; // Light blue for 'back.png'
 
   return (
     <section
@@ -36,7 +39,10 @@ const Hero = () => {
       </div>
 
       {/* Browser-like Box */}
-      <div className="relative z-10 max-w-screen-md mx-auto border-4 border-black bg-white rounded-lg hover:shadow-[8px_8px_0px_rgba(0,0,0,1)] transition-shadow duration-300 flex flex-col items-center">
+      <div
+        className="relative z-10 max-w-screen-md mx-auto border-4 border-black rounded-lg hover:shadow-[8px_8px_0px_rgba(0,0,0,1)] transition-shadow duration-300 flex flex-col items-center"
+        style={{ backgroundColor: boxBackgroundColor }}
+      >
         {/* Browser Window Top Bar */}
         <div className="w-full h-8 bg-gray-200 border-b-2 border-black flex justify-between items-center px-4">
           {/* Browser Window Controls */}
@@ -51,7 +57,7 @@ const Hero = () => {
         {/* Main Content Box */}
         <div className="flex items-center p-8">
           {/* Profile Photo */}
-          <div className="w-32 h-32 rounded-full border-4 border-black bg-gray-200 shadow-[8px_8px_0_rgba(0,0,0,1)] overflow-hidden mr-6">
+          <div className="w-32 h-32 rounded-full border-4 border-black shadow-[8px_8px_0_rgba(0,0,0,1)] overflow-hidden mr-6">
             <img
               src="/images/profile.png" // Replace with your profile photo URL
               alt="Profile"
