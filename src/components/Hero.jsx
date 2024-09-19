@@ -36,7 +36,7 @@ const Hero = () => {
       </div>
 
       {/* Browser-like Box */}
-      <div className="relative z-10 w-[90%] md:w-[500px] border-4 border-black bg-white rounded-lg hover:shadow-[8px_8px_0px_rgba(0,0,0,1)] transition-shadow duration-300 flex flex-col items-stretch">
+      <div className="relative z-10 max-w-screen-md mx-auto border-4 border-black bg-white rounded-lg hover:shadow-[8px_8px_0px_rgba(0,0,0,1)] transition-shadow duration-300 flex flex-col items-center">
         {/* Browser Window Top Bar */}
         <div className="w-full h-8 bg-gray-200 border-b-2 border-black flex justify-between items-center px-4">
           {/* Browser Window Controls */}
