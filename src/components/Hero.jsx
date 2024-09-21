@@ -17,22 +17,34 @@ const Hero = () => {
 
   // Define the sounds and their paths
   const sounds = {
-    crystal2: new Howl({ src: ['/sounds/clay.mp3'], onloaderror: (id, err) => console.error('Load error:', err) }),
+    crystal1: new Howl({ src: ['/sounds/clay.mp3'], onloaderror: (id, err) => console.error('Load error:', err) }),
+    crystal2: new Howl({ src: ['/sounds/ufo.mp3'], onloaderror: (id, err) => console.error('Load error:', err) }),
+    crystal3: new Howl({ src: ['/sounds/glimmer.mp3'], onloaderror: (id, err) => console.error('Load error:', err) }),
     crystal4: new Howl({ src: ['/sounds/ufo.mp3'], onloaderror: (id, err) => console.error('Load error:', err) }),
     crystal5: new Howl({ src: ['/sounds/glimmer.mp3'], onloaderror: (id, err) => console.error('Load error:', err) }),
     circle1: new Howl({ src: ['/sounds/clay.mp3'], onloaderror: (id, err) => console.error('Load error:', err) }),
     circle2: new Howl({ src: ['/sounds/confetti.mp3'], onloaderror: (id, err) => console.error('Load error:', err) }),
     triangle1: new Howl({ src: ['/sounds/bubble.mp3'], onloaderror: (id, err) => console.error('Load error:', err) }),
+    triangle2: new Howl({ src: ['/sounds/bubble.mp3'], onloaderror: (id, err) => console.error('Load error:', err) }), // Add sound for triangle2
     triangle3: new Howl({ src: ['/sounds/ufo.mp3'], onloaderror: (id, err) => console.error('Load error:', err) }),
   };
 
-  // Function to play the sound associated with a shape
+  // Function to play the sound and trigger animations associated with a shape
   const handleShapeClick = (shape) => {
     if (sounds[shape]) {
       sounds[shape].play();
     } else {
       console.log(`${shape} is disabled or does not have an associated sound.`);
     }
+
+    // Apply vibration and size change effects
+    const element = document.querySelector(`.${shape}`);
+    element.classList.add('vibrate', 'size-change');
+
+    // Remove the animation classes after the animation ends
+    setTimeout(() => {
+      element.classList.remove('vibrate', 'size-change');
+    }, 500); // Match with your animation duration
   };
 
   return (
@@ -42,15 +54,15 @@ const Hero = () => {
     >
       {/* Floating Shapes */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="shape crystal1" style={{ pointerEvents: 'auto' }}></div> {/* No click/sound */}
+        <div className="shape crystal1" onClick={() => handleShapeClick('crystal1')} style={{ pointerEvents: 'auto' }}></div>
         <div className="shape crystal2" onClick={() => handleShapeClick('crystal2')} style={{ pointerEvents: 'auto' }}></div>
-        <div className="shape crystal3" style={{ pointerEvents: 'auto' }}></div> {/* No click/sound */}
+        <div className="shape crystal3" onClick={() => handleShapeClick('crystal3')} style={{ pointerEvents: 'auto' }}></div>
         <div className="shape crystal4" onClick={() => handleShapeClick('crystal4')} style={{ pointerEvents: 'auto' }}></div>
         <div className="shape crystal5" onClick={() => handleShapeClick('crystal5')} style={{ pointerEvents: 'auto' }}></div>
         <div className="shape circle1" onClick={() => handleShapeClick('circle1')} style={{ pointerEvents: 'auto' }}></div>
         <div className="shape circle2" onClick={() => handleShapeClick('circle2')} style={{ pointerEvents: 'auto' }}></div>
         <div className="shape triangle1" onClick={() => handleShapeClick('triangle1')} style={{ pointerEvents: 'auto' }}></div>
-        <div className="shape triangle2" style={{ pointerEvents: 'auto' }}></div> {/* No click/sound */}
+        <div className="shape triangle2" onClick={() => handleShapeClick('triangle2')} style={{ pointerEvents: 'auto' }}></div> {/* Now clickable */}
         <div className="shape triangle3" onClick={() => handleShapeClick('triangle3')} style={{ pointerEvents: 'auto' }}></div>
       </div>
 
